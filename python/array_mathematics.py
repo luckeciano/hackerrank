@@ -1,15 +1,21 @@
 import numpy as np
 
-N, M = raw_input().split()
+N, M = map(int, raw_input().split())
+A = []
+B = []
+for _ in range(N):
+    l = map(int, raw_input().split())
+    A.append(l)
+for _ in range(N):
+    l = map(int, raw_input().split())
+    B.append(l)
+A = np.array(A)
+B = np.array(B)
 
-A = np.array(map(int, raw_input().split()))
-B = np.array(map(int, raw_input().split()))
-
-print('[' + str(A+B) + ']')
-print('[' + str(A-B) + ']')
-print('[' + str(A*B) + ']')
-print('[' + str(A/B) + ']')
-print('[' + str(A%B) + ']')
-print('[' + str(A**B) + ']')
-
+print(A+B)
+print(A-B)
+print(A*B)
+print(A/B)
+print(A%B)
+print(A**B)
 
